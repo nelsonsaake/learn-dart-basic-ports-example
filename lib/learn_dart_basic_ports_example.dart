@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:isolate';
 
 class Worker {
-  final Completer _isolateReady = new Completer.sync();
+  final Completer _isolateReady = Completer.sync();
   late final SendPort _sendPort;
 
   Future<void> spawn() async {
